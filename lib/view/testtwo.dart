@@ -170,13 +170,13 @@ class _ProcessTimelinePageState extends State<TestPackage> {
         )
       ]),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(FontAwesomeIcons.chevronRight),
         onPressed: () {
           setState(() {
             _processIndex = (_processIndex + 1) % _processes.length;
           });
         },
         backgroundColor: inProgressColor,
+        child: const Icon(FontAwesomeIcons.chevronRight),
       ),
     );
   }
@@ -221,8 +221,7 @@ class _BezierPainter extends CustomPainter {
       offset2 = _offset(radius, -angle);
       path = Path()
         ..moveTo(offset1.dx, offset1.dy)
-        ..quadraticBezierTo(0.0, size.height / 2, -radius,
-            radius) 
+        ..quadraticBezierTo(0.0, size.height / 2, -radius, radius)
         ..quadraticBezierTo(0.0, size.height / 2, offset2.dx, offset2.dy)
         ..close();
 
@@ -235,8 +234,8 @@ class _BezierPainter extends CustomPainter {
 
       path = Path()
         ..moveTo(offset1.dx, offset1.dy)
-        ..quadraticBezierTo(size.width, size.height / 2, size.width + radius,
-            radius) 
+        ..quadraticBezierTo(
+            size.width, size.height / 2, size.width + radius, radius)
         ..quadraticBezierTo(size.width, size.height / 2, offset2.dx, offset2.dy)
         ..close();
 
