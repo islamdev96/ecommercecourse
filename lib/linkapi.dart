@@ -1,5 +1,8 @@
 class AppLink {
+//
+
   static const String server = "https://exfai.com/ecommerce";
+  static const String test = "$server/test.php";
 
   static const String notification = "$server/notification.php";
   static const String imageststatic = "$server/upload";
